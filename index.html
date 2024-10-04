@@ -1,183 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Harrison Kioko</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Harrison Kioko</title>
-
-  <!--
+    <!--
     - favicon
   -->
-  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="./assets/images/logo.ico"
+      type="image/x-icon"
+    />
 
-  <!--
+    <!--
     - custom css link
   -->
-  <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
 
-  <!--
+    <!--
     - google font link
   -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
-
-  <!--
+  <body>
+    <!--
     - #MAIN
   -->
 
-  <main>
-
-    <!--
+    <main>
+      <!--
       - #SIDEBAR
     -->
 
-    <aside class="sidebar" data-sidebar>
+      <aside class="sidebar" data-sidebar>
+        <div class="sidebar-info">
+          <figure class="avatar-box">
+            <img src="./assets/images/dp.PNG" alt="Harrison Kioko" width="80" />
+          </figure>
 
-      <div class="sidebar-info">
+          <div class="info-content">
+            <h1 class="name" title="Harrison Kioko">Harrison Kioko</h1>
 
-        <figure class="avatar-box">
-          <img src="./assets/images/dp.PNG" alt="Harrison Kioko" width="80">
-        </figure>
+            <p class="title">Developer</p>
+          </div>
 
-        <div class="info-content">
-          <h1 class="name" title="Harrison Kioko">Harrison Kioko</h1>
+          <button class="info_more-btn" data-sidebar-btn>
+            <span>Show Contacts</span>
 
-          <p class="title">Developer</p>
+            <ion-icon name="chevron-down"></ion-icon>
+          </button>
         </div>
 
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
+        <div class="sidebar-info_more">
+          <div class="separator"></div>
 
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
+          <ul class="contacts-list">
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="mail-outline"></ion-icon>
+              </div>
 
-      </div>
+              <div class="contact-info">
+                <p class="contact-title">Email</p>
 
-      <div class="sidebar-info_more">
+                <a href="kharrylungu@gmail.com" class="contact-link"
+                  >kharrylungu@gmail.com</a
+                >
+              </div>
+            </li>
 
-        <div class="separator"></div>
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="phone-portrait-outline"></ion-icon>
+              </div>
 
-        <ul class="contacts-list">
+              <div class="contact-info">
+                <p class="contact-title">Phone</p>
 
-          <li class="contact-item">
+                <a href="tel:+254799207510" class="contact-link"
+                  >+254 (07) 9920-7510</a
+                >
+                <a href="tel:+254755934171" class="contact-link"
+                  >+254 (07) 5593-4171</a
+                >
+              </div>
+            </li>
 
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="calendar-outline"></ion-icon>
+              </div>
 
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
+              <div class="contact-info">
+                <p class="contact-title">Brand</p>
 
-              <a href="kharrylungu@gmail.com" class="contact-link">kharrylungu@gmail.com</a>
-            </div>
+                <a href="kharrylungu@gmail.com" class="contact-link"
+                  >Garden-Tech</a
+                >
+              </div>
+            </li>
 
-          </li>
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="location-outline"></ion-icon>
+              </div>
 
-          <li class="contact-item">
+              <div class="contact-info">
+                <p class="contact-title">Location</p>
 
-            <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
+                <address>Mombasa, Nyali, Kenya</address>
+              </div>
+            </li>
+          </ul>
 
-            <div class="contact-info">
-              <p class="contact-title">Phone</p>
+          <div class="separator"></div>
 
-              <a href="tel:+254799207510" class="contact-link">+254 (07) 9920-7510</a>
-              <a href="tel:+254755934171" class="contact-link">+254 (07) 5593-4171</a>
-            </div>
+          <ul class="social-list">
+            <li class="social-item">
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
 
-          </li>
+            <li class="social-item">
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
 
-          <li class="contact-item">
+            <li class="social-item">
+              <a href="#" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
 
-            <div class="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Brand</p>
-
-            <a href="kharrylungu@gmail.com" class="contact-link">Garden-Tech</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-
-              <address>Mombasa, Nyali, Kenya</address>
-            </div>
-
-          </li>
-
-        </ul>
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-facebook"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-          </li>
-
-        </ul>
-
-      </div>
-
-    </aside>
-
-
-
-
-
-    <!--
+      <!--
       - #main-content
     -->
 
-    <div class="main-content">
-
-      <!--
+      <div class="main-content">
+        <!--
         - #NAVBAR
       -->
 
-      <nav class="navbar">
+        <nav class="navbar">
+          <ul class="navbar-list">
+            <li class="navbar-item">
+              <button class="navbar-link active" data-nav-link>About</button>
+            </li>
 
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
-          </li>
-<!--
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Resume</button>
+            </li>
+            <!--
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Portfolio</button>
           </li>
@@ -190,581 +177,560 @@
             <button class="navbar-link" data-nav-link>Contact</button>
           </li>
 -->
-        </ul>
+          </ul>
+        </nav>
 
-      </nav>
-
-
-
-
-
-      <!--
+        <!--
         - #ABOUT
       -->
 
-      <article class="about  active" data-page="about">
+        <article class="about active" data-page="about">
+          <header>
+            <h2 class="h2 article-title">Personal Profile</h2>
+          </header>
 
-        <header>
-          <h2 class="h2 article-title">Personal Profile</h2>
-        </header>
-
-        <section class="about-text">
-          <p class="timeline-text2" >
-I am a dedicated and dependable individual, driven by a strong ambition to succeed. 
-As a self-motivated Computer Science graduate, I have cultivated a mature and
-responsible approach to every task and situation I encounter. Possessing excellent 
-interpersonal skills, I find it easy to connect with individuals from diverse 
-backgrounds, fostering positive and productive relationships. Through my 
-involvement in various programming activities, I have honed my technical expertise, 
-equipping me to tackle complex problem-solving challenges with confidence.
-I am an avid learner, always seeking opportunities to expand my knowledge and 
-skills. Embracing challenges is a natural part of my growth journey, and I am 
-committed to continuous improvement. My true passion lies in utilizing my technical 
-know-how to contribute meaningfully to the success of individuals and organizations 
-in their day-to-day operations.<br>
-Beyond my academic pursuits and computer-related interests, I find joy in giving 
-back to the community through participating in charity events. Contributing to 
-causes that make a positive impact on others is deeply fulfilling and drives me to be 
-an agent of positive change. I strive to be a person of integrity, constantly pushing 
-myself to achieve greatness while remaining humble and approachable. I am excited 
-to embrace new opportunities and challenges, confident in my ability to make a 
-difference in both my academic journey and in the lives of others.
-          </p>
-        </section>
-
-        
-        <section class="about-text">
-          <h3 class="h3 service-title">Career Objective</h3>
-          <p class="timeline-text2">
-            My career objective is to build a pioneering legacy in the field of Technology, driven 
-by my unwavering passion and dedication to societal development. With a blend of 
-research skills and valuable industrial experience, I aspire to make a significant 
-difference within the institutions I am associated with. By leveraging cutting-edge 
-technology and innovative solutions, I aim to contribute to meaningful 
-advancements that positively impact individuals and society as a whole. 
-My ultimate goal is to leave a lasting mark on the world through my work and 
-dedication to driving positive change.
-
-          </p>
+          <section class="about-text">
+            <p class="timeline-text2">
+              I am a dedicated and dependable individual, driven by a strong
+              ambition to succeed. As a self-motivated Computer Science
+              graduate, I have cultivated a mature and responsible approach to
+              every task and situation I encounter. Possessing excellent
+              interpersonal skills, I find it easy to connect with individuals
+              from diverse backgrounds, fostering positive and productive
+              relationships. Through my involvement in various programming
+              activities, I have honed my technical expertise, equipping me to
+              tackle complex problem-solving challenges with confidence. I am an
+              avid learner, always seeking opportunities to expand my knowledge
+              and skills. Embracing challenges is a natural part of my growth
+              journey, and I am committed to continuous improvement. My true
+              passion lies in utilizing my technical know-how to contribute
+              meaningfully to the success of individuals and organizations in
+              their day-to-day operations.<br />
+              Beyond my academic pursuits and computer-related interests, I find
+              joy in giving back to the community through participating in
+              charity events. Contributing to causes that make a positive impact
+              on others is deeply fulfilling and drives me to be an agent of
+              positive change. I strive to be a person of integrity, constantly
+              pushing myself to achieve greatness while remaining humble and
+              approachable. I am excited to embrace new opportunities and
+              challenges, confident in my ability to make a difference in both
+              my academic journey and in the lives of others.
+            </p>
           </section>
 
+          <section class="about-text">
+            <h3 class="h3 service-title">Career Objective</h3>
+            <p class="timeline-text2">
+              My career objective is to build a pioneering legacy in the field
+              of Technology, driven by my unwavering passion for security and
+              dedication to societal development. With a blend of research
+              skills and valuable industrial experience, I aspire to make a
+              significant impact within the institutions I work with by
+              developing secure, cutting-edge solutions. By leveraging
+              innovative technologies and security practices, I aim to
+              contribute to meaningful advancements that protect individuals and
+              organizations, while positively impacting society as a whole. My
+              ultimate goal is to leave a lasting mark through my dedication to
+              driving positive change and fostering a safer digital world.
+            </p>
+          </section>
 
-        <!--
+          <!--
           - service
         -->
 
-        <section class="service">
+          <section class="service">
+            <h3 class="h3 service-title">What i'm doing</h3>
 
-          <h3 class="h3 service-title">What i'm doing</h3>
+            <ul class="service-list">
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/icon-design.svg
+                "
+                    alt="design icon"
+                    width="40"
+                  />
+                </div>
 
-          <ul class="service-list">
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Web design</h4>
 
-            <li class="service-item">
+                  <p class="service-item-text">
+                    The most modern and high-quality design made at a
+                    professional level.
+                  </p>
+                </div>
+              </li>
 
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-design.svg
-                " alt="design icon" width="40">
-              </div>
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/icon-dev.svg"
+                    alt="Web development icon"
+                    width="40"
+                  />
+                </div>
 
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web design</h4>
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Web development</h4>
 
-                <p class="service-item-text">
-                  The most modern and high-quality design made at a professional level.
-                </p>
-              </div>
+                  <p class="service-item-text">
+                    High-quality development of sites at the professional level.
+                  </p>
+                </div>
+              </li>
 
-            </li>
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/icon-app.svg"
+                    alt="mobile app icon"
+                    width="40"
+                  />
+                </div>
 
-            <li class="service-item">
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Mobile apps</h4>
 
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
-              </div>
+                  <p class="service-item-text">
+                    Professional development of applications for iOS and
+                    Android.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </section>
 
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web development</h4>
-
-                <p class="service-item-text">
-                  High-quality development of sites at the professional level.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Mobile apps</h4>
-
-                <p class="service-item-text">
-                  Professional development of applications for iOS and Android.
-                </p>
-              </div>
-
-            </li>
-
-           
-
-          </ul>
-
-        </section>
-
-
-        <!--
+          <!--
           - testimonials
         -->
 
-        
-
-
-        <!--
+          <!--
           - testimonials modal
         -->
 
-        <div class="modal-container" data-modal-container>
+          <div class="modal-container" data-modal-container>
+            <div class="overlay" data-overlay></div>
 
-          <div class="overlay" data-overlay></div>
+            <section class="testimonials-modal">
+              <button class="modal-close-btn" data-modal-close-btn>
+                <ion-icon name="close-outline"></ion-icon>
+              </button>
 
-          <section class="testimonials-modal">
+              <div class="modal-img-wrapper">
+                <figure class="modal-avatar-box">
+                  <img
+                    src="./assets/images/avatar-1.png"
+                    alt="Daniel lewis"
+                    width="80"
+                    data-modal-img
+                  />
+                </figure>
 
-            <button class="modal-close-btn" data-modal-close-btn>
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-
-            <div class="modal-img-wrapper">
-              <figure class="modal-avatar-box">
-                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
-              </figure>
-
-              <img src="./assets/images/icon-quote.svg" alt="quote icon">
-            </div>
-
-            <div class="modal-content">
-
-              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
-
-              <time datetime="2021-06-14">28th  November, 2021</time>
-
-              <div data-modal-text>
-                <p>
-                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                  lot of experience
-                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                  consectetur adipiscing
-                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                </p>
+                <img src="./assets/images/icon-quote.svg" alt="quote icon" />
               </div>
 
-            </div>
+              <div class="modal-content">
+                <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
 
-          </section>
+                <time datetime="2021-06-14">28th November, 2021</time>
 
-        </div>
+                <div data-modal-text>
+                  <p>
+                    Richard was hired to create a corporate identity. We were
+                    very pleased with the work done. She has a lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum
+                    dolor sit amet, ullamcous cididt consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels
+                    dolore magnarels alia.
+                  </p>
+                </div>
+              </div>
+            </section>
+          </div>
+        </article>
 
-      </article>
-
-
-
-
-
-      <!--
+        <!--
         - #RESUME
       -->
 
-      <article class="resume" data-page="resume">
+        <article class="resume" data-page="resume">
+          <header>
+            <h2 class="h2 article-title">Resume</h2>
+          </header>
 
-        <header>
-          <h2 class="h2 article-title">Resume</h2>
-        </header>
+          <section class="timeline">
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="book-outline"></ion-icon>
+              </div>
 
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
+              <h3 class="h3">Education</h3>
             </div>
 
-            <h3 class="h3">Education</h3>
-          </div>
+            <ol class="timeline-list">
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  Master of Science in Computer Science
+                </h4>
 
-          <ol class="timeline-list">
+                <span>September 2023—To date</span>
 
-            <li class="timeline-item">
+                <p class="timeline-text">
+                  Institution: Maseno University, Kenya<br />
+                  Faculty: Computing & Informatics<br />
+                  Mode: Full-Time
+                </p>
+              </li>
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  Bachelor of Science in Computer Science
+                </h4>
 
-              <h4 class="h4 timeline-item-title">Master of Science in Computer Science</h4>
+                <span>Aug 2019-Aug 2023</span>
 
-              <span>September 2023—To date</span>
+                <p class="timeline-text">
+                  Institution: Maseno University, Kenya<br />
+                  Faculty: Computing & Informatics<br />
+                  Award: First class honours
+                </p>
+              </li>
 
-              <p class="timeline-text">
-                Institution: Maseno University, Kenya<br>
-                Faculty: Computing & Informatics<br>
-                Mode: Full-Time
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  Kenya Certificate of Secondary Education (K.C.S.E)
+                </h4>
 
-              </p>
+                <span>Jan 2015- Nov 2018</span>
 
-            </li>
-            <li class="timeline-item">
+                <p class="timeline-text">
+                  Institution: Mwangaza Secondary School<br />
+                  Grade: B Plain (64 points)<br />
+                  Subjects Done :
+                  <i>
+                    -Mathematics -English -Kiswahili -Physics -Chemistry
+                    -Geography -Christian Religious Education</i
+                  >
+                </p>
+              </li>
 
-              <h4 class="h4 timeline-item-title">Bachelor of Science in
-                Computer Science</h4>
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  Kenya Certificate of Primary Education (K.C.P.E)
+                </h4>
 
-              <span>Aug 2019-Aug 2023</span>
+                <span>Jan 2010- Nov 2014</span>
 
-              <p class="timeline-text">
-                Institution: Maseno University, Kenya<br>
-                Faculty: Computing & Informatics<br>
-                Award: First class honours
-              </p>
+                <p class="timeline-text">
+                  Institution: Lorna Waddington Primary School<br />
+                  Grade: 283 Out of 500 Marks<br />
+                  Subjects Done :
+                  <i>
+                    -Mathematics -English -Kiswahili -Science -Social Studies
+                    -Christian Religious Education</i
+                  >
+                </p>
+              </li>
+            </ol>
+          </section>
 
-            </li>
+          <section class="timeline">
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="book-outline"></ion-icon>
+              </div>
 
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Kenya Certificate of
-                Secondary Education
-                (K.C.S.E) </h4>
-
-              <span>Jan 2015- Nov 2018</span>
-
-              <p class="timeline-text">
-                Institution: Mwangaza Secondary School<br>
-                Grade: B Plain (64 points)<br>
-                Subjects Done : <i> -Mathematics    -English    -Kiswahili    -Physics    -Chemistry    -Geography   -Christian Religious Education</i>
-            
-            
-              </p>
-
-            </li>
-
-
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Kenya Certificate of 
-                Primary Education
-                (K.C.P.E)
-              </h4>
-
-              <span>Jan 2010- Nov 2014</span>
-
-              <p class="timeline-text">
-                Institution: Lorna Waddington Primary School<br>
-                Grade: 283 Out of 500 Marks<br>
-                Subjects Done : <i> -Mathematics    -English    -Kiswahili    -Science    -Social Studies   -Christian Religious Education</i>
-            
-                
-              </p>
-            
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
+              <h3 class="h3">Experience</h3>
             </div>
 
-            <h3 class="h3">Experience</h3>
-          </div>
+            <ol class="timeline-list">
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Freelancer</h4>
 
-          <ol class="timeline-list">
-            <li class="timeline-item">
+                <span>present</span>
 
-              <h4 class="h4 timeline-item-title">Freelancer</h4>
+                <p class="timeline-text">
+                  I am currently working as a freelance professional with
+                  expertise in multiple domains, including Software Development
+                  (Web and Mobile), Data Science and Analytics, Networking, and
+                  Machine Learning
+                </p>
+              </li>
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  Network Technical Assistant<br /><br />
+                  <i
+                    >HealthIT-United States Agency for International Development
+                    (USAID)</i
+                  >
+                </h4>
 
-              <span>present</span>
+                <span>Jan 2021 - Mar 2023</span>
 
-              <p class="timeline-text">
-                
-I am currently working as a freelance professional with expertise in multiple domains, including Software Development (Web and Mobile), Data Science and Analytics, Networking, and Machine Learning </p>
+                <p class="timeline-text">
+                  I have worked with USAID in their Health IT program in Kenya
+                  as a <i>seasonal Network Technical Assistant</i>. My
+                  experience in Health IT has been incredibly fulfilling,
+                  particularly in empowering hospitals and healthcare facilities
+                  with advanced ICT solutions in Kenya. In networking, I have
+                  had the opportunity to design and implement robust networking
+                  infrastructures that enhance communication and data exchange
+                  within hospitals, facilitating seamless patient care
+                  coordination and improving overall efficiency.<br />
+                  Moreover, my involvement in the implementation of the Kenya
+                  EMR (Electronic Medical Records) System has been instrumental
+                  in digitizing patient records, enabling healthcare providers
+                  to access real-time patient data, make informed decisions, and
+                  enhance the quality of care delivered. Additionally, I have
+                  actively participated in Health IT hackathons, which have
+                  fostered innovative solutions for healthcare challenges in
+                  Kenya, encouraging collaboration between developers and
+                  healthcare professionals. Lastly, my experience with the DHIS
+                  (District Health Information System) system has allowed me to
+                  contribute to the centralization of health data, facilitating
+                  data analytics and informed decision-making for public health
+                  interventions. Witnessing the positive impact of Health IT on
+                  healthcare delivery in Kenya has been a rewarding journey, and
+                  I am excited to continue exploring new avenues to leverage
+                  technology for the betterment of healthcare services in the
+                  country.<br />
+                  I was also actively involved in Network Administration, IT
+                  Service Management, IT Support and Server Management.
+                </p>
+              </li>
 
-            </li>
-            <li class="timeline-item">
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  Intern <br /><br /><i
+                    >Ministry of Labour and Social Protection Nairobi, Kenya</i
+                  >
+                </h4>
 
-              <h4 class="h4 timeline-item-title"> Network Technical Assistant<br><br>
-                <i>HealthIT-United States Agency 
-                for International 
-                Development
-                (USAID)</i></h4>
+                <span>May 2022-Sep 2022</span>
 
-              <span>Jan 2021 - Mar 2023</span>
+                <p class="timeline-text">
+                  I am privileged to have engaged with the state department of
+                  social protection and senior citizens affair under the
+                  Ministry of Labour and Social Protection as an intern. During
+                  this period, I got to sharpen my skills in Networking,
+                  Software Engineering, Project Management, Systems Engineering,
+                  Data analysis, ICT support and software handling.
+                </p>
+              </li>
+            </ol>
+          </section>
 
-              <p class="timeline-text" >
-                I have worked with USAID in their Health IT program in Kenya as a <i>seasonal Network 
-Technical Assistant</i>. My experience in Health IT has been incredibly fulfilling, 
-particularly in empowering hospitals and healthcare facilities with advanced ICT 
-solutions in Kenya. In networking, I have had the opportunity to design and implement 
-robust networking infrastructures that enhance communication and data exchange 
-within hospitals, facilitating seamless patient care coordination and improving overall 
-efficiency.<br>
-Moreover, my involvement in the implementation of the Kenya EMR (Electronic 
-Medical Records) System has been instrumental in digitizing patient records, enabling 
-healthcare providers to access real-time patient data, make informed decisions, and 
-enhance the quality of care delivered. Additionally, I have actively participated in 
-Health IT hackathons, which have fostered innovative solutions for healthcare 
-challenges in Kenya, encouraging collaboration between developers and healthcare 
-professionals. Lastly, my experience with the DHIS (District Health Information 
-System) system has allowed me to contribute to the centralization of health data, 
-facilitating data analytics and informed decision-making for public health 
-interventions. Witnessing the positive impact of Health IT on healthcare delivery in 
-Kenya has been a rewarding journey, and I am excited to continue exploring new 
-avenues to leverage technology for the betterment of healthcare services in the 
-country.<br>
-I was also actively involved in Network Administration, IT Service Management, IT 
-Support and Server Management.
-              </p>
+          <section class="testimonials">
+            <h3 class="h3 testimonials-title">Certificates & Badges</h3>
 
-            </li>
+            <ul class="testimonials-list has-scrollbar">
+              <li class="testimonials-item">
+                <div class="content-card" data-testimonials-item>
+                  <figure class="testimonials-avatar-box">
+                    <img
+                      src="./assets/images/awards.svg"
+                      alt="Daniel lewis"
+                      width="20"
+                      data-testimonials-avatar
+                    />
+                  </figure>
 
-           
+                  <h4
+                    class="h4 testimonials-item-title"
+                    data-testimonials-title
+                  >
+                    Google
+                  </h4>
 
-            <li class="timeline-item">
+                  <div class="testimonials-text" data-testimonials-text>
+                    <p>
+                      I have been honored to be recognized as a recipient of the
+                      Google Data Science Badge.
+                    </p>
+                  </div>
+                </div>
+              </li>
 
-              <h4 class="h4 timeline-item-title"> Intern <br><br><i>Ministry of Labour and 
-                Social Protection
-                Nairobi, Kenya</i></h4>
+              <li class="testimonials-item">
+                <div class="content-card" data-testimonials-item>
+                  <figure class="testimonials-avatar-box">
+                    <img
+                      src="./assets/images/awards.svg"
+                      alt="Jessica miller"
+                      width="20"
+                      data-testimonials-avatar
+                    />
+                  </figure>
 
-              <span>May 2022-Sep 2022</span>
+                  <h4
+                    class="h4 testimonials-item-title"
+                    data-testimonials-title
+                  >
+                    Stackoverflow
+                  </h4>
 
-              <p class="timeline-text">
-               I am privileged to have engaged with the state department of social protection and 
-                senior citizens affair under the Ministry of Labour and Social Protection as an intern. 
-                During this period, I got to sharpen my skills in Networking, Software Engineering, 
-                Project Management, Systems Engineering, Data analysis, ICT support and software 
-                handling.
-                
-              </p>
+                  <div class="testimonials-text" data-testimonials-text>
+                    <p>
+                      Am honoured to have been awarded Stackoverflow Teacher's
+                      Badge
+                      <a
+                        class="chatlinks"
+                        href="https://stackoverflow.com/users/20425784/ezekiel-maina"
+                        >View Profile</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </li>
 
-            </li>
+              <li class="testimonials-item">
+                <div class="content-card" data-testimonials-item>
+                  <figure class="testimonials-avatar-box">
+                    <img
+                      src="./assets/images/awards.svg"
+                      alt="Emily evans"
+                      width="20"
+                      data-testimonials-avatar
+                    />
+                  </figure>
 
-          </ol>
+                  <h4
+                    class="h4 testimonials-item-title"
+                    data-testimonials-title
+                  >
+                    Cisco
+                  </h4>
 
-        </section>
+                  <div class="testimonials-text" data-testimonials-text>
+                    <p>
+                      Greatful for Cisco Certified Networking Academy (CCNA) 1-3
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </section>
 
-        <section class="testimonials">
+          <section class="skill">
+            <h3 class="h3 skills-title">Development skills & Tools</h3>
 
-          <h3 class="h3 testimonials-title">Certificates & Badges</h3>
-
-          <ul class="testimonials-list has-scrollbar">
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/awards.svg" alt="Daniel lewis" width="20" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Google</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    I have been honored to be recognized as a recipient of the Google Data Science Badge.  </p>
+            <ul class="skills-list content-card">
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Data Science :</h5>
+                  <data value="70"><i>Python</i></data>
                 </div>
 
-              </div>
-            </li>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 100%"></div>
+                </div>
+              </li>
 
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/awards.svg" alt="Jessica miller" width="20" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Stackoverflow</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Am honoured to have been awarded Stackoverflow Teacher's Badge
-                    <a class="chatlinks" href="https://stackoverflow.com/users/20425784/ezekiel-maina">View Profile</a>
-                
-                  </p>
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Machine Learning :</h5>
+                  <data value="50"><i> Python, Matlab</i></data>
                 </div>
 
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/awards.svg" alt="Emily evans" width="20" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Cisco</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Greatful for Cisco Certified Networking Academy (CCNA) 1-3  </p>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 100%"></div>
+                </div>
+              </li>
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Natural Language Processing :</h5>
+                  <data value="50"><i> Python </i></data>
                 </div>
 
-              </div>
-            </li>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 90%"></div>
+                </div>
+              </li>
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Web Development :</h5>
+                  <data value="80"
+                    ><i> Flutter, HTML, CSS, Javascript , php, ajax</i></data
+                  >
+                </div>
 
-            
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 100%"></div>
+                </div>
+              </li>
 
-          </ul>
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Mobile Development :</h5>
+                  <data value="70"
+                    ><i>Flutter, Dart, Node.js. firebase</i></data
+                  >
+                </div>
 
-        </section>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 90%"></div>
+                </div>
+              </li>
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Pattern Recognition :</h5>
+                  <data value="50"><i> Matlab</i></data>
+                </div>
 
-        <section class="skill">
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 70%"></div>
+                </div>
+              </li>
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Expert System :</h5>
+                  <data value="70"><i>SWI-Prolog</i></data>
+                </div>
 
-          <h3 class="h3 skills-title">Development skills & Tools</h3>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 70%"></div>
+                </div>
+              </li>
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">API :</h5>
+                  <data value="90"><i> Rest-Json</i></data>
+                </div>
 
-          <ul class="skills-list content-card">
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 90%"></div>
+                </div>
+              </li>
 
-            <li class="skills-item">
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Database Administration :</h5>
+                  <data value="50"><i> MySQL</i></data>
+                </div>
 
-              <div class="title-wrapper">
-                <h5 class="h5">Data Science :</h5>
-                <data value="70"><i>Python</i></data>
-              </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 100%"></div>
+                </div>
+              </li>
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Coding :</h5>
+                  <data value="50"><i> C, Java, Python, dart </i></data>
+                </div>
 
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 100%;"></div>
-              </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 90%"></div>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </article>
 
-            </li>
-
-           
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Machine Learning :</h5>
-                <data value="50"><i> Python, Matlab</i></data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 100%;"></div>
-              </div>
-
-            </li>
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Natural Language Processing :</h5>
-                <data value="50"><i> Python
-                </i></data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
-              </div>
-
-            </li>
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Web Development : </h5>
-                <data value="80"><i> Flutter, HTML, CSS, Javascript , php, ajax</i></data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 100%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Mobile Development :</h5>
-                <data value="70"><i>Flutter, Dart, Node.js. firebase</i></data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
-              </div>
-
-            </li>
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Pattern Recognition :</h5>
-                <data value="50"><i> Matlab</i></data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
-
-            </li>
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5"> Expert System :</h5>
-                <data value="70"><i>SWI-Prolog</i></data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
-
-            </li>
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">API :</h5>
-                <data value="90"><i> Rest-Json</i></data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
-              </div>
-
-            </li>
-
-            
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Database
-                  Administration
-                   :</h5>
-                <data value="50"><i>  MySQL</i></data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 100%;"></div>
-              </div>
-
-            </li>
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Coding :</h5>
-                <data value="50"><i> C, Java, Python, dart
-                </i></data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
-              </div>
-
-            </li>
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
+        <!--
         - #PORTFOLIO
       -->
-  <!--
+        <!--
       <article class="portfolio" data-page="portfolio">
 
         <header>
@@ -999,12 +965,10 @@ Support and Server Management.
 
  -->
 
-
-
-      <!--
+        <!--
         - #BLOG
       -->
-<!--
+        <!--
       <article class="blog" data-page="blog">
 
         <header>
@@ -1193,10 +1157,10 @@ Support and Server Management.
 
    -->
 
-      <!--
+        <!--
         - #CONTACT
       -->
- <!--
+        <!--
       <article class="contact" data-page="contact">
 
      
@@ -1301,26 +1265,24 @@ Support and Server Management.
 
       </article>
  -->
-    </div>
+      </div>
+    </main>
 
-  </main>
-
-
-
-
-
-
-  <!--
+    <!--
     - custom js link
   -->
-  <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/script.js"></script>
 
-  <!--
+    <!--
     - ionicon link
   -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-</body>
-
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
 </html>
