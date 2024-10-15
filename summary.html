@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      margin: 20px;
+    }
+    .container {
+      max-width: 800px;
+      background: #fff;
+      padding: 20px;
+      margin: auto;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1, h2, h4 {
+      color: #333;
+    }
+    p {
+      margin: 10px 0;
+    }
+    .section-title {
+      border-bottom: 2px solid #333;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .skills-list, .projects-list, .experience-list {
+      padding: 10px 0;
+    }
+    .experience-list li, .projects-list li {
+      margin-bottom: 10px;
+    }
+    .experience-item, .project-item {
+      background: #f9f9f9;
+      padding: 10px;
+      border-left: 4px solid #007bff;
+      border-radius: 5px;
+    }
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+       /* Print button styles */
+       .print-button {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 10px 15px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .print-button:hover {
+      background-color: #0056b3;
+    }
+    @media print {
+      body * {
+        visibility: hidden; /* Hide all elements */
+      }
+      .container, .container * {
+        visibility: visible; /* Show the container and its contents */
+      }
+      .container {
+        position: absolute; /* Position it correctly for printing */
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <button class="print-button" onclick="window.print()">Print</button> <!-- Print Button -->
+    
+    <h1>HARRISON MUTUKU KIOKO</h1>
+    <p><strong>Backend Developer & Cybersecurity Enthusiast</strong></p>
+    <p>kharrylungu@gmail.com| <a href="www.linkedin.com/in/mutukuharrisonkioko">LinkedIn</a> | <a href="https://github.com/mutukukioko">GitHub</a> | <a href="https://mutukukioko.github.io/portfolio/">Portfolio</a></p>
+
+    <h2 class="section-title">Summary</h2>
+    <p>Passionate backend developer and cybersecurity professional with 4+ years of experience in web development, system security, and IT support. Skilled in building secure, scalable applications with expertise in frameworks like Django, Laravel, and Flask. Currently advancing knowledge in penetration testing and ethical hacking. Dedicated to leveraging technology to solve real-world problems and continuously learning to stay at the forefront of innovation.</p>
+
+    <h2 class="section-title">Skills</h2>
+    <ul class="skills-list">
+      <li><strong>Programming Languages:</strong> Python, PHP, JavaScript, SQL, HTML/CSS</li>
+      <li><strong>Frameworks & Tools:</strong> Django, Flask, Laravel, React.js, Node.js</li>
+      <li><strong>Cybersecurity:</strong> Penetration Testing (HTB), Vulnerability Assessment, Linux Administration</li>
+      <li><strong>Database Management:</strong> MySQL, Firebase</li>
+      <li><strong>Version Control:</strong> Git, GitHub</li>
+      <li><strong>Cloud Services:</strong> AWS (beginner), Firebase</li>
+      <li><strong>Other Skills:</strong> IT Support, PowerShell, Two-Factor Authentication (2FA)</li>
+    </ul>
+
+    <h2 class="section-title">Work Experience</h2>
+    <ul class="experience-list">
+      <li class="experience-item">
+        <h4>Freelance Web Developer</h4>
+        <p><em>February 2023 – Present</em></p>
+        <p>Developed responsive and scalable websites for clients in real estate, church communities, and automotive services. Created and managed full-stack web applications using Django and React. Focused on delivering high-quality solutions, adhering to best practices in web security and optimization.</p>
+        <p><strong>Notable Projects:</strong></p>
+        <ul class="projects-list">
+          <li class="project-item">
+            <strong>Springtide Properties:</strong> Developed a real estate website with property listings and client inquiry forms. <a href="https://springtideproperties.com" target="_blank">springtideproperties.com</a>
+          </li>
+          <li class="project-item">
+            <strong>Akurinu Youth Community:</strong> Built a community-driven site for event updates and outreach. <a href="https://akurinuyouth.com" target="_blank">akurinuyouth.com</a>
+          </li>
+          <li class="project-item">
+            <strong>Pete's Auto:</strong> Created a platform for showcasing car services and educating users on physical car objects. <a href="https://petesauto.co.ke" target="_blank">petesauto.co.ke</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="experience-item">
+        <h4>Moonlight Talent Group</h4>
+        <p><em>Social Media Manager | January 2024 – Present</em></p>
+        <p>Managed social media content for a talent group specializing in stage plays, poetry, and environmental initiatives. Planned and executed strategies for social media engagement to increase reach and visibility.</p>
+      </li>
+
+      <li class="experience-item">
+        <h4>Generation Kenya Freelancing Program</h4>
+        <p><em>Graduate | February 2024</em></p>
+        <p>Learned various online work platforms, freelancing best practices, and managing client relationships.</p>
+      </li>
+    </ul>
+
+    <h2 class="section-title">Education</h2>
+    <p><strong>Bachelor of Science in Computer Science</strong></p>
+    <p><em>Maseno University | Graduated 2023</em></p>
+    <p>Specialized in software development, IT support, and cybersecurity basics.</p>
+
+    <h2 class="section-title">Certifications & Training</h2>
+    <ul>
+      <li><strong>Cybersecurity Fundamentals</strong> - ISC² Candidate</li>
+      <li><strong>Penetration Testing</strong> - Hack The Box (Ongoing)</li>
+      <li><strong>Ethical Hacking</strong> - Cylander Org (Ongoing)</li>
+      <li><strong>Freelancing Program</strong> - Generation Kenya</li>
+    </ul>
+
+    <h2 class="section-title">Personal Projects</h2>
+    <ul class="projects-list">
+      <li class="project-item">
+        <strong>Task Management Tool:</strong> Developed a full-stack application with Django and React for task tracking and user management.
+      </li>
+      <li class="project-item">
+        <strong>NLP Chatbot:</strong> Created a chatbot using Django and Natural Language Processing for seamless user communication.
+      </li>
+      <li class="project-item">
+        <strong>Pentesting & Security Research:</strong> Actively learning and participating in ethical hacking challenges to strengthen web application security.
+      </li>
+    </ul>
+
+    <h2 class="section-title">Core Values</h2>
+    <ul>
+      <li>Integrity and honesty in all engagements</li>
+      <li>Commitment to delivering quality solutions</li>
+      <li>Passion for continuous learning and personal growth</li>
+      <li>A desire to contribute to societal development through technology</li>
+    </ul>
+
+    <h2 class="section-title">Career Objective</h2>
+    <p>To build a pioneering legacy in the field of Technology by leveraging my skills in web development, cybersecurity, and research to contribute to meaningful advancements that positively impact society.</p>
+  </div>
+</body>
+</html>
