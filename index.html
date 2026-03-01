@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberSec Analyst | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Matrix Rain Canvas (background effect) -->
+    <canvas id="matrixCanvas"></canvas>
+    
+    <!-- Main Container -->
+    <div class="container">
+        <!-- ASCII Art Header -->
+        <div class="ascii-header">
+            <pre>
+    ╔══════════════════════════════════════╗
+       ║     CYBER SECURITY ANALYST     ║
+    ╚══════════════════════════════════════╝
+            </pre>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="terminal-nav">
+            <span class="prompt">$></span>
+            <a href="#home" class="nav-link active">~/home</a>
+            <a href="#skills" class="nav-link">~/skills</a>
+            <a href="#projects" class="nav-link">~/projects</a>
+            <a href="#writeups" class="nav-link">~/writeups</a>
+            <a href="#contact" class="nav-link">~/contact</a>
+            <span class="cursor">_</span>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="home" class="section">
+            <div class="terminal-line">
+                <span class="green-text">last login:</span> <span class="cyan-text">$(date)</span>
+            </div>
+            <!-- <div class="terminal-line">
+                <span class="green-text">user:</span> <span class="white-text">cyber-analyst</span>
+            </div>
+            <div class="terminal-line">
+                <span class="green-text">host:</span> <span class="white-text">github.io</span>
+            </div> -->
+            
+            <div class="hero-content">
+                <div class="glitch-wrapper">
+                    <h1 class="glitch-text" data-text=">_Harrison Kioko">>_Harrison Kioko</h1>
+                </div>
+                <h2 class="typing-effect">> Cybersecurity Analyst & Ethical Hacker<span class="cursor">_</span></h2>
+                
+                <div class="stats-container">
+                    <div class="stat-box">
+                        <span class="stat-value">2+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-value">15+</span>
+                        <span class="stat-label">CTF Challenges</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-value">5+</span>
+                        <span class="stat-label">Security Tools</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <div class="section-header">
+                <span class="prompt">$></span>
+                <span class="command">cat skills.txt</span>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>[ Network Security ]</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">> Nmap</span>
+                        <span class="skill-tag">> Wireshark</span>
+                        <span class="skill-tag">> Snort</span>
+                        <span class="skill-tag">> Metasploit</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>[ Web Security ]</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">> Burp Suite</span>
+                        <span class="skill-tag">> OWASP Top 10</span>
+                        <span class="skill-tag">> XSS</span>
+                        <span class="skill-tag">> SQL Injection</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>[ Programming ]</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">> Python</span>
+                        <span class="skill-tag">> Bash</span>
+                        <span class="skill-tag">> JavaScript</span>
+                        <span class="skill-tag">> PowerShell</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>[ Certifications ]</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">> Computer Science</span>
+                        <span class="skill-tag">> CPTS HackTheBox </span>
+                        <span class="skill-tag">> Cisco Networking</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skill Progress Bars -->
+            <div class="skill-progress">
+                <div class="progress-item">
+                    <span class="progress-label">> Penetration Testing</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 85%"></div>
+                    </div>
+                </div>
+                <div class="progress-item">
+                    <span class="progress-label">> Network Analysis</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="progress-item">
+                    <span class="progress-label">> Python Scripting</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 75%"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="section-header">
+                <span class="prompt">$></span>
+                <span class="command">ls -la projects/</span>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-permissions">-rw-r--r--</span>
+                        <span class="project-name">>_Network Scanner</span>
+                    </div>
+                    <p class="project-description">Python-based network scanner with multi-threading and service detection capabilities.</p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Scapy</span>
+                        <span>Sockets</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link"><i class="fab fa-github"></i> View Code</a>
+                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-permissions">-rw-r--r--</span>
+                        <span class="project-name">>_Log Analyzer</span>
+                    </div>
+                    <p class="project-description">Automated log analysis tool that detects potential security incidents and generates reports.</p>
+                    <div class="project-tech">
+                        <span>Bash</span>
+                        <span>Python</span>
+                        <span>Regex</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link"><i class="fab fa-github"></i> View Code</a>
+                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-permissions">-rw-r--r--</span>
+                        <span class="project-name">>_CTF Write-ups</span>
+                    </div>
+                    <p class="project-description">Detailed walkthroughs of Capture The Flag challenges from various platforms.</p>
+                    <div class="project-tech">
+                        <span>Markdown</span>
+                        <span>Python</span>
+                        <span>Reverse Eng.</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link"><i class="fab fa-github"></i> View Write-ups</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Write-ups Section -->
+        <section id="writeups" class="section">
+            <div class="section-header">
+                <span class="prompt">$></span>
+                <span class="command">cat latest_writeups.log</span>
+            </div>
+
+            <div class="writeups-timeline">
+                <div class="writeup-item">
+                    <span class="writeup-date">[2024-01-15]</span>
+                    <span class="writeup-platform">[TryHackMe]</span>
+                    <a href="#" class="writeup-title">>_Mr. Robot CTF Walkthrough</a>
+                </div>
+                <div class="writeup-item">
+                    <span class="writeup-date">[2024-01-10]</span>
+                    <span class="writeup-platform">[HackTheBox]</span>
+                    <a href="#" class="writeup-title">>_Blue Machine Walkthrough</a>
+                </div>
+                <div class="writeup-item">
+                    <span class="writeup-date">[2024-01-05]</span>
+                    <span class="writeup-platform">[VulnHub]</span>
+                    <a href="#" class="writeup-title">>_DC-1 Walkthrough</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="section-header">
+                <span class="prompt">$></span>
+                <span class="command">./contact.sh</span>
+            </div>
+
+            <div class="contact-container">
+                <div class="terminal-contact">
+                    <div class="contact-line">
+                        <span class="green-text">Email:</span> 
+                        <a href="mailto:kharrylungu@gmail.com">kharrylungu@gmail.com</a>
+                    </div>
+                    <div class="contact-line">
+                        <span class="green-text">GitHub:</span> 
+                        <a href="https://github.com/Mutukukioko">github.com/Mutukukioko</a>
+                    </div>
+                    <div class="contact-line">
+                        <span class="green-text">LinkedIn:</span> 
+                        <a href="https://linkedin.com/in/mutukuharrisonkioko">linkedin.com/in/yourprofile</a>
+                    </div>
+                    
+                    <div class="contact-line">
+                        <span class="green-text">HackTheBox:</span> 
+                        <a href="https://profile.hackthebox.com/profile/019c41af-1509-70cb-b134-bddc373d5e14">hackthebox.com/profile/Harrison</a>
+                    </div>
+                </div>
+
+                <!-- Matrix-style contact form  -->
+              <form class="contact-form" id="my-form" action="https://formspree.io/f/mqedobgz" method="POST">
+    <div class="form-line">
+        <span class="prompt">$></span>
+        <input type="text" name="message" placeholder="Enter your message..." class="terminal-input">
+        <br>
+        <span class="prompt" id="my-form-status"></span>
+    </div>
+    <button type="submit" class="terminal-button">[ Send Message ]</button>
+</form>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <pre class="footer-ascii">
+    ╔══════════════════════════════════════════════════════════╗
+     ║  >_ EOF - Last updated: 2026 | Made with ████          ║
+    ╚══════════════════════════════════════════════════════════╝
+                </pre>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+   var _0x43af69=_0x5b2a;(function(_0x3320dc,_0x38122d){var _0x531492=_0x5b2a,_0x17540f=_0x3320dc();while(!![]){try{var _0xf5ef17=-parseInt(_0x531492(0xa4))/(-0x23c0+0x5*0xeb+0x1f2a*0x1)*(parseInt(_0x531492(0xa7))/(-0x33d*0x7+0x5*-0x46d+-0x8f6*-0x5))+-parseInt(_0x531492(0xc3))/(-0x2631+-0x2056+0x468a)+parseInt(_0x531492(0xa0))/(0x15ea+-0x1477+0x16f*-0x1)+parseInt(_0x531492(0x9f))/(-0x16*-0x53+-0x9d*0x2d+0x147c)+parseInt(_0x531492(0xb2))/(0x8*0x413+-0x1*-0x313+0x16d*-0x19)*(parseInt(_0x531492(0xcc))/(-0x6c5*0x2+-0x116b+0x1efc))+-parseInt(_0x531492(0x99))/(0x6*-0x425+0xb7d+0xd69)+-parseInt(_0x531492(0xc8))/(-0x2*-0x1215+-0xb*0x377+0x1fc)*(-parseInt(_0x531492(0xc0))/(0x117b*-0x1+-0x62*0x9+0x14f7));if(_0xf5ef17===_0x38122d)break;else _0x17540f['push'](_0x17540f['shift']());}catch(_0x32025c){_0x17540f['push'](_0x17540f['shift']());}}}(_0x38bd,-0x5*-0x14cfb+-0xa401+0x461fb));function _0x38bd(){var _0x213dcc=['getElement','eYssa','preventDef','stener','submit','3573755lKLVLl','316608JGeiKQ','kceGT','BiqxX','rxxeu','1JvtxRu','VvPvx','sJeiB','1102538tPvWqr','reset','4|8|6|0','target','VjSJG','my-form-st','method','my-form','DblUj','KllsF','wnTxa','18ClSCTE','RvMxT','✗\x20Failed','DtmyF','vgsjO','cGWii','catch','errors','map','eIUoM','applicatio','split','length','action','515730xsSWEc','OgHYn','PTiNN','2025432ZZWbBN','hasOwn','n/json','✗\x20Error','QWUAi','18JmyMTs','addEventLi','✓\x20sent','ById','2540139DkCnSr','ault','atus','WnwZR','nyIpI','innerHTML','5|2|1|7|3|','GxrZl','json','join','dlylr','message','then','702480tuTtDY'];_0x38bd=function(){return _0x213dcc;};return _0x38bd();}function _0x5b2a(_0x997f1f,_0x31ae67){_0x997f1f=_0x997f1f-(0xf52*0x1+-0x5*-0x727+-0x20*0x194);var _0x15fdd5=_0x38bd();var _0x300f0f=_0x15fdd5[_0x997f1f];return _0x300f0f;}var form=document[_0x43af69(0x9a)+_0x43af69(0xcb)](_0x43af69(0xae)),spinInterval;async function handleSubmit(_0x22213a){var _0x524ae9=_0x43af69,_0x15118e={'RvMxT':_0x524ae9(0xd2)+_0x524ae9(0xa9),'nyIpI':function(_0x24c479,_0x5ccdce,_0x45b98b){return _0x24c479(_0x5ccdce,_0x45b98b);},'BiqxX':_0x524ae9(0xbc)+_0x524ae9(0xc5),'DblUj':_0x524ae9(0xac)+_0x524ae9(0xce),'dlylr':function(_0x1f1bb2,_0x2c46de){return _0x1f1bb2%_0x2c46de;},'sJeiB':function(_0xc275a6,_0x30afc9){return _0xc275a6+_0x30afc9;},'QWUAi':_0x524ae9(0xb9),'vgsjO':_0x524ae9(0xb4),'kceGT':function(_0x5059ed,_0x2b5eb0){return _0x5059ed(_0x2b5eb0);},'PTiNN':_0x524ae9(0xca),'OgHYn':function(_0x53c5ff,_0xcc4cc5,_0x584838){return _0x53c5ff(_0xcc4cc5,_0x584838);},'rxxeu':_0x524ae9(0xc6)},_0x17a7c9=_0x15118e[_0x524ae9(0xb3)][_0x524ae9(0xbd)]('|'),_0x5cae3b=-0x7*-0x58d+-0x1f5e+-0x1*0x77d;while(!![]){switch(_0x17a7c9[_0x5cae3b++]){case'0':_0x15118e[_0x524ae9(0xd0)](fetch,_0x22213a[_0x524ae9(0xaa)][_0x524ae9(0xbf)],{'method':form[_0x524ae9(0xad)],'body':_0x1fcf64,'headers':{'Accept':_0x15118e[_0x524ae9(0xa2)]}})[_0x524ae9(0x98)](_0x1bd15e=>{var _0x3d6553=_0x524ae9;_0x41d606[_0x3d6553(0x9b)](clearInterval,spinInterval),_0x1bd15e['ok']?(_0x77a10[_0x3d6553(0xd1)]=_0x41d606[_0x3d6553(0xd3)],form[_0x3d6553(0xa8)]()):_0x1bd15e[_0x3d6553(0xd4)]()[_0x3d6553(0x98)](_0x3c147d=>{var _0x5e8a6a=_0x3d6553;Object[_0x5e8a6a(0xc4)](_0x3c147d,_0x41d606[_0x5e8a6a(0xcf)])?_0x77a10[_0x5e8a6a(0xd1)]=_0x41d606[_0x5e8a6a(0xb7)]('✗\x20',_0x3c147d[_0x41d606[_0x5e8a6a(0xcf)]][_0x5e8a6a(0xba)](_0xb989b7=>_0xb989b7[_0x5e8a6a(0x97)])[_0x5e8a6a(0x95)](',\x20')):_0x77a10[_0x5e8a6a(0xd1)]=_0x41d606[_0x5e8a6a(0xbb)];}),_0x41d606[_0x3d6553(0xa5)](setTimeout,()=>{var _0x1281da=_0x3d6553;_0x77a10[_0x1281da(0xd1)]='';},0x1*0x203f+0x169c+-0x2b23);})[_0x524ae9(0xb8)](_0x2b918b=>{var _0x382cd2=_0x524ae9;_0x41d606[_0x382cd2(0x9b)](clearInterval,spinInterval),_0x77a10[_0x382cd2(0xd1)]=_0x41d606[_0x382cd2(0xb0)],_0x41d606[_0x382cd2(0xb5)](setTimeout,()=>{var _0x27bc14=_0x382cd2;_0x77a10[_0x27bc14(0xd1)]='';},-0xbc+0x1*-0x110c+0x1d80);});continue;case'1':var _0x77a10=document[_0x524ae9(0x9a)+_0x524ae9(0xcb)](_0x15118e[_0x524ae9(0xaf)]);continue;case'2':_0x22213a[_0x524ae9(0x9c)+_0x524ae9(0xcd)]();continue;case'3':var _0x8906c7=['|','/','-','\x5c'];continue;case'4':var _0x3d0d21=-0x1*0x9e9+0x2072+0x783*-0x3;continue;case'5':var _0x41d606={'wnTxa':function(_0x359d1f,_0x5bcf47){var _0x5aaf5c=_0x524ae9;return _0x15118e[_0x5aaf5c(0x96)](_0x359d1f,_0x5bcf47);},'VjSJG':function(_0x49cae0,_0x3ab5fc){var _0x5b9775=_0x524ae9;return _0x15118e[_0x5b9775(0xa6)](_0x49cae0,_0x3ab5fc);},'WnwZR':_0x15118e[_0x524ae9(0xc7)],'cGWii':function(_0x27b46e,_0x42d1af){var _0x2d769a=_0x524ae9;return _0x15118e[_0x2d769a(0xa6)](_0x27b46e,_0x42d1af);},'eIUoM':_0x15118e[_0x524ae9(0xb6)],'eYssa':function(_0x20d3fa,_0x19405b){var _0x3ebc31=_0x524ae9;return _0x15118e[_0x3ebc31(0xa1)](_0x20d3fa,_0x19405b);},'GxrZl':_0x15118e[_0x524ae9(0xc2)],'VvPvx':function(_0x375ded,_0x49e6c0,_0x53123e){var _0x7939c=_0x524ae9;return _0x15118e[_0x7939c(0xc1)](_0x375ded,_0x49e6c0,_0x53123e);},'KllsF':_0x15118e[_0x524ae9(0xa3)],'DtmyF':function(_0x4ea94d,_0x544526,_0x51cd12){var _0x4c5c5b=_0x524ae9;return _0x15118e[_0x4c5c5b(0xd0)](_0x4ea94d,_0x544526,_0x51cd12);}};continue;case'6':spinInterval=_0x15118e[_0x524ae9(0xc1)](setInterval,()=>{var _0xda6056=_0x524ae9;_0x3d0d21=_0x41d606[_0xda6056(0xb1)](_0x41d606[_0xda6056(0xab)](_0x3d0d21,0x66d*0x3+0x10ca+-0x2410),_0x8906c7[_0xda6056(0xbe)]),_0x77a10[_0xda6056(0xd1)]='\x20'+_0x8906c7[_0x3d0d21];},-0xf56*0x2+0x1dfc+0x146);continue;case'7':var _0x1fcf64=new FormData(_0x22213a[_0x524ae9(0xaa)]);continue;case'8':_0x77a10[_0x524ae9(0xd1)]='\x20|';continue;}break;}}form[_0x43af69(0xc9)+_0x43af69(0x9d)](_0x43af69(0x9e),handleSubmit);
+</script>
+</body>
+</html>
