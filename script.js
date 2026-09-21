@@ -175,6 +175,36 @@
         update();
     })();
 
+    /* ---------- mobile navigation toggle ---------- */
+    (function navToggle() {
+        var toggle = $('nav-toggle');
+        var links = $('nav-links');
+        if (!toggle || !links) { return; }
+
+        function close() {
+            links.classList.remove('open');
+            toggle.setAttribute('aria-expanded', 'false');
+        }
+
+        toggle.addEventListener('click', function () {
+            var open = links.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', String(open));
+        });
+
+        links.addEventListener('click', close);
+
+        doc.addEventListener('click', function (e) {
+            if (links.classList.contains('open') &&
+                !links.contains(e.target) && !toggle.contains(e.target)) {
+                close();
+            }
+        }, { passive: true });
+
+        window.addEventListener('resize', function () {
+            if (window.innerWidth > 900) { close(); }
+        }, { passive: true });
+    })();
+
     /* ---------- nav active link ---------- */
     (function navActive() {
         var links = doc.querySelectorAll('.nav-link');
